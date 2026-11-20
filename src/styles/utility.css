@@ -1,0 +1,93 @@
+
+/* Espaçamentos */
+
+.py-base {
+    padding-block: var(--py-base);
+}
+
+.py-lg {
+    padding-block: var(--py-lg);
+}
+
+.py-xl {
+    padding-block: var(--py-xl);
+}
+
+.py-sm {
+    padding-block: var(--py-sm);
+}
+
+.px-lg {
+    padding-inline: var(--px-lg);
+}
+
+/* Visibilidade */
+
+.desktop-only {
+    display: none;
+}
+
+/* Layout */
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Espaçamentos entre elementos */
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-1\.5 {
+    gap: 1.5rem;
+}
+
+/* Botões */
+
+.btn-wrapper {
+    cursor: pointer;
+    padding: 2px;
+}
+
+/* Container */
+
+.container {
+    --max-width: 680px;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+}
+
+/* Responsividade */
+
+@media (width >= 1280px) {
+    .container {
+        --max-width: 1050px;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
